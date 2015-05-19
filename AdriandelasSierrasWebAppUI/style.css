@@ -1,0 +1,297 @@
+header{
+	background: #4C0B5F;
+	padding:1rem 2rem;
+	display:flex;
+	text-align:center;
+	justify-content:space-between;
+	flex-flow:row wrap;
+	align-items:center;
+}
+
+hr {
+  margin-top:0.5rem;
+  margin-bottom:0.5rem;
+  border-top: 0.1rem solid #ffffff;
+  width:90%;
+}
+
+body{
+	margin:0;
+	padding:0;
+	font-family:sans-serif;
+	font-size: 1rem;
+}
+
+main{
+	margin:0.5rem 1rem 0.5rem 0.5rem; 
+	flex:1;
+	display:inline-block;
+	order:2;
+	width:75%,
+}
+
+footer{
+	background:#4C0B5F;
+	color:#ffffff;
+	text-align:center;
+	font-size:1rem;
+	padding:1rem;
+}
+
+aside{
+	background:#290837;
+	display:flex;
+	flex-flow:column wrap;
+	width:25%;
+}
+
+input[list].header-select {
+	padding: 0.7rem 0.5rem;
+	border-radius: 0.3rem;
+	border-style: none;
+	color: black;
+}
+
+input[list].notif-select {
+	padding: 0.5rem 0.2rem;
+	width:50%;
+	border-radius: 0.3rem;
+	border-style: none;
+	color: black;
+	margin-top:0.25rem;
+	margin-left:2rem;
+	margin-right:1rem;
+}
+
+#main-flex{
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+#middle-item{
+	height:2.5rem;
+	margin:0rem;
+	flex-grow:2;
+}
+
+#notif-icons{
+	display: flex;
+	flex-flow:row wrap;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#notif-icons i{
+	color:white;
+	text-align:center;
+	height:2rem;
+	padding:1.8rem;
+	margin:0;
+}
+
+#ul-notif{
+	width:80%;
+}
+
+#ul-notif li{
+	list-style:none;
+	border-left-style:solid;
+	border-left-width:0.4rem;
+	color:white;
+	margin:0.5rem 0;
+	padding: 0.1rem 0.6rem;
+	height: 4rem;
+}
+
+#ul-notif li:hover .notificationInfo p{
+	display: none;
+}
+
+#ul-notif li:hover .notificationActions{
+	display: block;
+	height: 100%;
+}
+
+#ul-notif li .red h5{
+	color:#E5583F;
+}
+
+#ul-notif li .green2 h5{
+	color:#8CC253;
+}
+
+#ul-notif li .yellow h5{
+	color:#F6BC44;
+}
+
+#ul-notif li .blue h5{
+	color:#2E72B5;
+}
+
+#ul-notif li h5{
+	font-family:sans-serif;
+	font-weight:bold;
+}
+
+#ul-notif li p{
+	font-size:0.8rem;
+}
+
+#ul-notif li i{
+	padding:0 1rem;
+}
+
+#aside-container{
+	display:flex;
+	flex-flow: row wrap;
+}
+
+#scroll-notif{
+  color: white;
+  width: 5%;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 1.5rem;
+}
+
+#scroll-notif i{
+	padding:1rem 0;
+}
+
+#seeAll{
+	color:white;
+	margin-right:auto;
+	margin-left:auto;
+	margin-top:1rem;
+	padding:0.7rem;
+	background:#B882B9;
+	border-radius:0.5rem;
+	cursor:pointer;
+}
+
+#options{
+	color:white;
+	margin-right:auto;
+	margin-left:auto;
+}
+
+#options i{
+	padding-right:1.5rem;
+}
+
+.mainaside{
+	display: flex;
+	flex-direction: row;
+	flex:1;
+}
+
+.main-buttons{
+	display:flex;
+	flex-flow:row wrap;
+	color:white;
+	font-weight:bold;
+}
+
+.green{
+	background:#3DBB9B;
+	cursor:pointer;
+	text-align:center;
+	width:12rem;
+	height:12rem;
+	padding: 1rem 0;
+	margin:1rem;
+	flex-grow:4;
+}
+
+.green i{
+	margin:0.5rem;
+	text-align:center;
+	padding: 1rem 0;
+}
+
+.warning{
+	border-left-color: #E5583F;
+}
+
+.email{
+	border-left-color: #F6BC44;
+}
+
+.bus{
+	border-left-color: rgb(140, 194, 83);
+}
+
+.notes{
+	border-left-color: #2E72B5;
+}
+
+[data-notificationsEmail] [data-notificationsBus] [data-notificationsWarning] [data-notificationsNotes]{
+	position: relative;
+}
+
+[data-notificationsEmail]:after {
+	content: attr(data-notificationsEmail);
+	position: absolute;
+	background:#F6BC44;
+	border-radius: 100%;
+	display: inline-block;
+	padding: 0.2rem;
+	color: #f2f2f2;
+	right: 1rem;
+	top: 1rem;
+	font-size: 0.8rem;
+}
+
+[data-notificationsBus]:after {
+	content: attr(data-notificationsBus);
+	position: absolute;
+	background:#8CC253;
+	border-radius: 100%;
+	display: inline-block;
+	padding: 0.2rem;
+	color: #f2f2f2;
+	right: 1rem;
+	top: 1rem;
+	font-size: 0.8rem;
+}
+
+[data-notificationsWarning]:after {
+	content: attr(data-notificationsWarning);
+	position: absolute;
+	background:#E5583F;
+	border-radius: 100%;
+	display: inline-block;
+	padding: 0.2rem;
+	color: #f2f2f2;
+	right: 1rem;
+	top: 1rem;
+	font-size: 0.8rem;
+}
+
+[data-notificationsNotes]:after {
+	content: attr(data-notificationsNotes);
+	position: absolute;
+	background:#2E72B5;
+	border-radius: 100%;
+	display: inline-block;
+	padding: 0.2rem;
+	color: #f2f2f2;
+	right: 1rem;
+	top: 1rem;
+	font-size: 0.8rem;
+}
+
+.notificationActions {
+	display: none;
+}
+
+.compress{
+	color:white;
+	margin-right:1rem;
+	margin-top:1rem;
+}
+
+.disable{
+	opacity:0.5;
+}
