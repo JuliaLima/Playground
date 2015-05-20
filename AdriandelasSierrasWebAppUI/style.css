@@ -59,8 +59,9 @@ input[list].notif-select {
 	border-style: none;
 	color: black;
 	margin-top:0.25rem;
-	margin-left:2rem;
-	margin-right:1rem;
+	margin-bottom: 1rem;
+	margin-left:auto;
+	margin-right:auto;
 }
 
 #main-flex{
@@ -143,6 +144,7 @@ input[list].notif-select {
 }
 
 #aside-container{
+	flex-grow: 1;
 	display:flex;
 	flex-flow: row wrap;
 }
@@ -150,8 +152,8 @@ input[list].notif-select {
 #scroll-notif{
   color: white;
   width: 5%;
-  margin-top: auto;
-  margin-bottom: auto;
+  margin-top: 20%;
+  margin-bottom: 80%;
   margin-left: 1.5rem;
 }
 
@@ -168,16 +170,6 @@ input[list].notif-select {
 	background:#B882B9;
 	border-radius:0.5rem;
 	cursor:pointer;
-}
-
-#options{
-	color:white;
-	margin-right:auto;
-	margin-left:auto;
-}
-
-#options i{
-	padding-right:1.5rem;
 }
 
 .mainaside{
