@@ -172,6 +172,19 @@ input[list].notif-select {
 	cursor:pointer;
 }
 
+#header-icon{
+	display:none;
+}
+
+#header-search{
+	display:inline-block;
+}
+
+#header-user{
+	display:none;
+	text-align:center;
+}
+
 .mainaside{
 	display: flex;
 	flex-direction: row;
@@ -286,4 +299,38 @@ input[list].notif-select {
 
 .disable{
 	opacity:0.5;
+}
+
+@media screen and (max-width:1240px) {
+	aside {
+		display: none;
+	}
+	
+	header img{
+		display:none;
+	}
+	
+	#header-icon{
+		display:inline-block;
+		color:white;
+	}
+}
+
+@media screen and (max-width:800px) {
+	input[list].header-select {
+		display:none;
+	}
+	
+	#middle-item{
+		height:1.5rem;
+	}
+	
+	.btn-group{
+		display:none;
+	}
+	
+	#header-user{
+		display:inline-block;
+		color:white;
+	}
 }

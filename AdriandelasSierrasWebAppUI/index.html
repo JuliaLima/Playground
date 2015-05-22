@@ -5,6 +5,7 @@
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<link rel="stylesheet" href="font-awesome-4.3.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="font-awesome-4.3.0/css/site.css">
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
 		<script>
 			/*window.onload = function() {
 				Array.prototype.forEach.call(document.querySelector('.ul-notif').children, function(li){
@@ -35,6 +36,9 @@
 		<div id="main-flex">
 				<header>
 					<img src="img/logo.png">
+					<div id="header-icon">
+						<i class="fa fa-bell fa-lg"></i>
+					</div>
 					<div id="middle-item">
 						<input list="select-list" class="header-select" placeholder="D&oacute;nde buscar?">
 							<datalist id="select-list">
@@ -49,12 +53,17 @@
 								<option value="Altman Adrian"></option>
 								<option value="Altman Victoria"></option>
 							</datalist>
-							<i class="fa fa-search fa-fw form-control"></i>
+							<div id="header-search">
+								<i class="fa fa-search fa-lg"></i>
+							</div>
 					</div>
 					<div class="btn-group open">
 						<span class="btn btn-primary" href="#"><i class="fa fa-user fa-fw" ></i> Adrian</span>
 						<a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
 						<span class="fa fa-caret-down"></span></a>
+					</div>
+					<div id="header-user">
+						<i class="fa fa-user fa-lg" ></i>
 					</div>
 				</header>
 			<div class="mainaside">
@@ -112,10 +121,10 @@
 				</main>
 				<aside>
 					<div id="notif-icons">
-						<i data-notificationsEmail="10" class="fa fa-envelope yellow"></i>
-						<i data-notificationsBus="08" class="fa fa-bus green2"></i>
-						<i data-notificationsWarning="05" class="fa fa-warning red"></i>
-						<i data-notificationsNotes="20" class="fa fa-thumb-tack blue"></i>
+						<i data-notificationsEmail="10" class="fa fa-envelope fa-lg yellow"></i>
+						<i data-notificationsBus="08" class="fa fa-bus fa-lg green2"></i>
+						<i data-notificationsWarning="05" class="fa fa-warning fa-lg red"></i>
+						<i data-notificationsNotes="20" class="fa fa-thumb-tack fa-lg blue"></i>
 					</div>
 					<div id="aside-container">
 						<ul id="ul-notif">
