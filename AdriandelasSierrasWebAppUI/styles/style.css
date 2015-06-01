@@ -23,7 +23,6 @@ body{
 }
 
 main{
-	margin:0.5rem 1rem 0.5rem 0.5rem; 
 	flex:1;
 	display:inline-block;
 	order:2;
@@ -34,7 +33,7 @@ footer{
 	background:#4C0B5F;
 	color:#ffffff;
 	text-align:center;
-	font-size:1rem;
+	font-size:0.8rem;
 	padding:1rem;
 }
 
@@ -54,14 +53,14 @@ input[list].header-select {
 
 input[list].notif-select {
 	padding: 0.5rem 0.2rem;
-	width:50%;
+	width: 50%;
 	border-radius: 0.3rem;
 	border-style: none;
 	color: black;
-	margin-top:0.25rem;
-	margin-bottom: 1rem;
-	margin-left:auto;
-	margin-right:auto;
+	margin-top: 1rem;
+	margin-bottom: 0.5rem;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 #main-flex{
@@ -87,7 +86,7 @@ input[list].notif-select {
 	color:white;
 	text-align:center;
 	height:2rem;
-	padding:1.8rem;
+	padding:1.6rem 1.8rem;
 	margin:0;
 }
 
@@ -140,7 +139,7 @@ input[list].notif-select {
 }
 
 #ul-notif li i{
-	padding:0 1rem;
+	padding:0 0.7rem;
 }
 
 #aside-container{
@@ -178,11 +177,32 @@ input[list].notif-select {
 
 #header-search{
 	display:inline-block;
+	margin-left: 0.5rem;
+	color:#B882B9;
 }
 
 #header-user{
 	display:none;
 	text-align:center;
+}
+
+#header-search-mobile{
+	color:white;
+	display:none;
+}
+
+#mainNotifications{
+	background:#290837;  margin-left: auto;
+	margin-right: auto;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column wrap;
+	flex: 1;
+}
+
+#listNotifications{
+	display:flex;
+	flex-flow:row wrap;
 }
 
 .mainaside{
@@ -191,8 +211,7 @@ input[list].notif-select {
 	flex:1;
 }
 
-.main-buttons{
-	display:flex;
+#main-buttons{
 	flex-flow:row wrap;
 	color:white;
 	font-weight:bold;
@@ -301,6 +320,18 @@ input[list].notif-select {
 	opacity:0.5;
 }
 
+.search{
+	color:#B882B9;
+}
+
+.flex-type{
+	display:flex;
+}
+
+.mobile{
+	display:none;
+}
+
 @media screen and (max-width:1240px) {
 	aside {
 		display: none;
@@ -314,9 +345,38 @@ input[list].notif-select {
 		display:inline-block;
 		color:white;
 	}
+	
+	#scroll-notif{
+		display:none;
+	}
+	
+	#aside-container{
+		margin-left:auto;
+		margin-right:auto;
+	}
+
+	.mobile{
+		display:flex;
+	}
+	
+	.non-displayed{
+		display:none;
+	}
+	
+	.flex-type.displayed{
+		display:flex;
+	}
+	
+	#ul-notif{
+		width:100%;
+	}
 }
 
 @media screen and (max-width:800px) {
+	header{
+		height:4.5rem;
+	}
+	
 	input[list].header-select {
 		display:none;
 	}
@@ -332,5 +392,13 @@ input[list].notif-select {
 	#header-user{
 		display:inline-block;
 		color:white;
+	}
+	
+	#header-search-mobile{
+		display:inline;
+	}
+	
+	#header-search{
+		display:none;
 	}
 }

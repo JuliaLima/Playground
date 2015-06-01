@@ -2,42 +2,19 @@
 <html>
 	<head>
 		<title>Adrian de las Sierras</title>
-		<link rel="stylesheet" type="text/css" href="style.css">
-		<link rel="stylesheet" href="font-awesome-4.3.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="font-awesome-4.3.0/css/site.css">
+		<link rel="stylesheet" type="text/css" href="styles/style.css">
+		<link rel="stylesheet" href="styles/font-awesome-4.3.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="styles/font-awesome-4.3.0/css/site.css">
 		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
-		<script>
-			/*window.onload = function() {
-				Array.prototype.forEach.call(document.querySelector('.ul-notif').children, function(li){
-					var to = false;
-					li.onmouseleave = function(){
-						if(!to) {
-							to = setTimeout(function(){
-								if(!!li.children[2]) {
-									li.children[2].style.display = "none";
-								}
-							}, 500);
-						}
-					};
-					li.onmouseover = function(){
-						if(!!li.children[2]) {
-							li.children[2].style.display = "block";
-						}
-						if(to) {
-							clearTimeout(to);
-							to = false;
-						}
-					};
-				});
-			}*/
-		</script>
+		<script type="text/javascript" src="scripts/vendor/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="scripts/ui.js"></script>
 	</head>
 	<body>
 		<div id="main-flex">
 				<header>
 					<img src="img/logo.png">
 					<div id="header-icon">
-						<i class="fa fa-bell fa-lg"></i>
+						<i class="fa fa-bell fa-lg" id="bell"></i>
 					</div>
 					<div id="middle-item">
 						<input list="select-list" class="header-select" placeholder="D&oacute;nde buscar?">
@@ -56,6 +33,9 @@
 							<div id="header-search">
 								<i class="fa fa-search fa-lg"></i>
 							</div>
+							<div id="header-search-mobile">
+								<i class="fa fa-search fa-lg"></i>
+							</div>
 					</div>
 					<div class="btn-group open">
 						<span class="btn btn-primary" href="#"><i class="fa fa-user fa-fw" ></i> Adrian</span>
@@ -68,7 +48,7 @@
 				</header>
 			<div class="mainaside">
 				<main>
-					<div class="main-buttons">
+					<div id="main-buttons" class="flex-type">
 						<div class="green">
 							<i class="fa fa-file fa-5x"></i><br />
 							Nueva Venta
@@ -118,8 +98,123 @@
 							Liquidaci&oacute;n
 						</div>
 					</div>
+					<div id="mainNotifications" class="flex-type mobile non-displayed">
+						<div id="actionsNotifications">
+							<input list="notif-list" class="notif-select" placeholder="Ordenar por">
+							<datalist id="notif-list">
+								<option value="Fecha"></option>
+								<option value="Prioridad"></option>
+								<option value="Prioridad"></option>
+								<option value="Prioridad"></option>
+								<option value="Prioridad"></option>
+								<option value="Prioridad"></option>
+							</datalist>
+							<div id="notif-icons">
+								<i data-notificationsEmail="10" class="fa fa-envelope fa-lg yellow"></i>
+								<i data-notificationsBus="08" class="fa fa-bus fa-lg green2"></i>
+								<i data-notificationsWarning="05" class="fa fa-warning fa-lg red"></i>
+								<i data-notificationsNotes="20" class="fa fa-thumb-tack fa-lg blue"></i>
+							</div>
+						</div>
+						<div id="listNotifications">
+							<ul id="ul-notif">
+								<li class="warning">
+									<div class="notificationInfo red">
+										<h5>Vencimiento de Pago</h5>
+										<p>Reserva N&ordm; 150516</p>
+									</div>
+									<div class="notificationActions">
+										<i class="fa fa-bookmark"></i>
+										<i class="fa fa-eye icon"></i>
+										<i class="fa fa-check icon"></i>
+										<i class="fa fa-close icon"></i>
+									</div>
+								</li>
+								<li class="email">
+									<div class="notificationInfo yellow">
+										<h5>Respuesta a Proveedor</h5>
+										<p>Reserva N&ordm; 150516</p>
+									</div>
+									<div class="notificationActions">
+										<i class="fa fa-bookmark"></i>
+										<i class="fa fa-eye icon"></i>
+										<i class="fa fa-check icon"></i>
+										<i class="fa fa-close icon"></i>
+									</div>
+								</li>
+								<li class="bus">
+									<div class="notificationInfo green2">
+										<h5>Vto Reserva Bus</h5>
+										<p>Reserva N&ordm; 150516</p>
+									</div>
+									<div class="notificationActions">
+										<i class="fa fa-bookmark"></i>
+										<i class="fa fa-eye icon"></i>
+										<i class="fa fa-check icon"></i>
+										<i class="fa fa-close icon"></i>
+									</div>
+								</li>
+								<li class="notes">
+									<div class="notificationInfo blue">
+										<h5>Varios</h5>
+										<p>Reserva N&ordm; 150516</p>
+									</div>
+									<div class="notificationActions">
+										<i class="fa fa-bookmark"></i>
+										<i class="fa fa-eye icon"></i>
+										<i class="fa fa-check icon"></i>
+										<i class="fa fa-close icon"></i>
+									</div>
+								</li>
+								<li class="email">
+									<div class="notificationInfo yellow">
+										<h5>Respuesta a Proveedor</h5>
+										<p>Reserva N&ordm; 150516</p>
+									</div>
+									<div class="notificationActions">
+										<i class="fa fa-bookmark"></i>
+										<i class="fa fa-eye icon"></i>
+										<i class="fa fa-check icon"></i>
+										<i class="fa fa-close icon"></i>
+									</div>
+								</li>
+								<li class="warning">
+									<div class="notificationInfo red">
+										<h5>Vencimiento de Pago</h5>
+										<p>Reserva N&ordm; 150516</p>
+									</div>
+									<div class="notificationActions">
+										<i class="fa fa-bookmark"></i>
+										<i class="fa fa-eye icon"></i>
+										<i class="fa fa-check icon"></i>
+										<i class="fa fa-close icon"></i>
+									</div>
+								</li>
+								<li class="notes">
+									<div class="notificationInfo blue">
+										<h5>Varios</h5>
+										<p>Reserva N&ordm; 150516</p>
+									</div>
+									<div class="notificationActions">
+										<i class="fa fa-bookmark"></i>
+										<i class="fa fa-eye icon"></i>
+										<i class="fa fa-check icon"></i>
+										<i class="fa fa-close icon"></i>
+									</div>
+								</li>
+							</ul>
+						</div>
 				</main>
 				<aside>
+					<input list="notif-list" class="notif-select" placeholder="Ordenar por">
+						<datalist id="notif-list">
+							<option value="Fecha"></option>
+							<option value="Prioridad"></option>
+							<option value="Prioridad"></option>
+							<option value="Prioridad"></option>
+							<option value="Prioridad"></option>
+							<option value="Prioridad"></option>
+						</datalist>
 					<div id="notif-icons">
 						<i data-notificationsEmail="10" class="fa fa-envelope fa-lg yellow"></i>
 						<i data-notificationsBus="08" class="fa fa-bus fa-lg green2"></i>
@@ -220,17 +315,6 @@
 							<i class="fa fa-arrow-circle-down fa-lg"></i>
 						</div>
 					</div>
-					
-					<hr />
-					<input list="notif-list" class="notif-select" placeholder="Ordenar por">
-						<datalist id="notif-list">
-							<option value="Fecha"></option>
-							<option value="Prioridad"></option>
-							<option value="Prioridad"></option>
-							<option value="Prioridad"></option>
-							<option value="Prioridad"></option>
-							<option value="Prioridad"></option>
-						</datalist>
 				</aside>
 			</div>
 			<footer>
