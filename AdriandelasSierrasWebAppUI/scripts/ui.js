@@ -6,15 +6,11 @@ var setUiEvents = function() {
 		var mainDisplayValue = main.css('display');
 		var aside=$('#mainNotifications');
 		if(mainDisplayValue == 'flex'){
-			main.removeClass('displayed');
 			main.addClass('non-displayed');
 			aside.removeClass('non-displayed');
-			aside.addClass('displayed');
 		} else {
-			main.removeClass('non-displayed');
-			main.addClass('displayed');
-			aside.removeClass('displayed');
 			aside.addClass('non-displayed');
+			main.removeClass('non-displayed');
 		}
 	}
 	

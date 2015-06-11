@@ -3,6 +3,7 @@
 	<head>
 		<title>Adrian de las Sierras</title>
 		<link rel="stylesheet" type="text/css" href="styles/style.css">
+		<link rel="stylesheet" type="text/css" href="styles/animate.css">
 		<link rel="stylesheet" href="styles/font-awesome-4.3.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="styles/font-awesome-4.3.0/css/site.css">
 		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
@@ -11,44 +12,60 @@
 	</head>
 	<body>
 		<div id="main-flex">
-				<header>
-					<img src="img/logo.png">
-					<div id="header-icon">
-						<i class="fa fa-bell fa-lg" id="bell"></i>
-					</div>
-					<div id="middle-item">
-						<input list="select-list" class="header-select" placeholder="D&oacute;nde buscar?">
-							<datalist id="select-list">
-								<option value="Clientes"></option>
-								<option value="Productos"></option>
-								<option value="Proveedores"></option>
-								<option value="Pax"></option>
-							</datalist>
-						<input list="search-list" class="header-select" placeholder="Qu&eacute; buscar?">
-							<datalist id="search-list">
-								<option value="Altman Augusto"></option>
-								<option value="Altman Adrian"></option>
-								<option value="Altman Victoria"></option>
-							</datalist>
-							<div id="header-search">
-								<i class="fa fa-search fa-lg"></i>
+			<header>
+				<img src="img/logo.png">
+				<div id="header-icon">
+					<i class="fa fa-bell fa-lg" id="bell"></i>
+				</div>
+				<div id="middle-item">
+					<input list="select-list" class="header-select" placeholder="D&oacute;nde buscar?">
+						<datalist id="select-list">
+							<option value="Clientes"></option>
+							<option value="Productos"></option>
+							<option value="Proveedores"></option>
+							<option value="Pax"></option>
+						</datalist>
+					<input list="search-list" class="header-select" placeholder="Qu&eacute; buscar?">
+						<datalist id="search-list">
+							<option value="Altman Augusto"></option>
+							<option value="Altman Adrian"></option>
+							<option value="Altman Victoria"></option>
+						</datalist>
+						<div id="header-search">
+							<i class="fa fa-search fa-lg"></i>
+						</div>
+						<div id="header-search-mobile">
+							<i class="fa fa-search fa-lg"></i>
+							<div class="searchModal">
+								<input list="select-list" class="header-select" placeholder="D&oacute;nde buscar?">
+									<datalist id="select-list">
+										<option value="Clientes"></option>
+										<option value="Productos"></option>
+										<option value="Proveedores"></option>
+										<option value="Pax"></option>
+									</datalist><br />
+								<input list="search-list" class="header-select" placeholder="Qu&eacute; buscar?">
+									<datalist id="search-list">
+										<option value="Altman Augusto"></option>
+										<option value="Altman Adrian"></option>
+										<option value="Altman Victoria"></option>
+									</datalist><br />
+								<button type="button">Buscar</button>
 							</div>
-							<div id="header-search-mobile">
-								<i class="fa fa-search fa-lg"></i>
-							</div>
-					</div>
-					<div class="btn-group open">
-						<span class="btn btn-primary" href="#"><i class="fa fa-user fa-fw" ></i> Adrian</span>
-						<a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
-						<span class="fa fa-caret-down"></span></a>
-					</div>
-					<div id="header-user">
-						<i class="fa fa-user fa-lg" ></i>
-					</div>
-				</header>
+						</div>
+				</div>
+				<div class="btn-group open">
+					<span class="btn btn-primary" href="#"><i class="fa fa-user fa-fw" ></i> Adrian</span>
+					<a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
+					<span class="fa fa-caret-down"></span></a>
+				</div>
+				<div id="header-user">
+					<i class="fa fa-user fa-lg" ></i>
+				</div>
+			</header>
 			<div class="mainaside">
 				<main>
-					<div id="main-buttons" class="flex-type">
+					<div id="main-buttons" class="overridable-flex">
 						<div class="green">
 							<i class="fa fa-file fa-5x"></i><br />
 							Nueva Venta
@@ -98,7 +115,7 @@
 							Liquidaci&oacute;n
 						</div>
 					</div>
-					<div id="mainNotifications" class="flex-type mobile non-displayed">
+					<div id="mainNotifications" class="mobile-overridable-flex non-displayed">
 						<div id="actionsNotifications">
 							<input list="notif-list" class="notif-select" placeholder="Ordenar por">
 							<datalist id="notif-list">
@@ -204,6 +221,7 @@
 								</li>
 							</ul>
 						</div>
+					</div>
 				</main>
 				<aside>
 					<input list="notif-list" class="notif-select" placeholder="Ordenar por">
