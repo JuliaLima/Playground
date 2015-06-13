@@ -9,8 +9,6 @@ header{
 }
 
 hr {
-  margin-top:0.5rem;
-  margin-bottom:0.5rem;
   border-top: 0.1rem solid #ffffff;
   width:90%;
 }
@@ -52,49 +50,49 @@ input[list].header-select {
 }
 
 input[list].notif-select {
-	padding: 0.5rem 0.2rem;
-	width: 50%;
+	padding: 0.7rem 0.5rem;
 	border-radius: 0.3rem;
 	border-style: none;
 	color: black;
-	margin-top: 1rem;
-	margin-bottom: 0.5rem;
+	margin-top: 0.6rem;
 	margin-left: auto;
 	margin-right: auto;
+	width: 18rem;
 }
 
-#main-flex{
+.main-flex{
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
 }
 
-#middle-item{
+.middle-item{
 	height:2.5rem;
 	margin:0rem;
 	flex-grow:2;
 }
 
-#notif-icons{
+.notif-icons{
 	display: flex;
 	flex-flow:row wrap;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-#notif-icons i{
-	color:white;
-	text-align:center;
-	height:2rem;
-	padding:1.6rem 1.8rem;
-	margin:0;
+.notif-icons i{
+	color: white;
+	text-align: center;
+	height: 2rem;
+	padding: 1.6rem 1.65rem;
+	margin: 0;
+	cursor: pointer;
 }
 
-#ul-notif{
+.ul-notif{
 	width:80%;
 }
 
-#ul-notif li{
+.ul-notif li{
 	list-style:none;
 	border-left-style:solid;
 	border-left-width:0.4rem;
@@ -104,63 +102,105 @@ input[list].notif-select {
 	height: 4rem;
 }
 
-#ul-notif li:hover .notificationInfo p{
+.ul-notif li:hover .notificationInfo p{
 	display: none;
 }
 
-#ul-notif li:hover .notificationActions{
+.ul-notif li:hover .notificationActions{
 	display: block;
 	height: 100%;
 }
 
-#ul-notif li .red h5{
+.ul-notif li .red h5{
 	color:#E5583F;
 }
 
-#ul-notif li .green2 h5{
+.ul-notif li .green2 h5{
 	color:#8CC253;
 }
 
-#ul-notif li .yellow h5{
+.ul-notif li .yellow h5{
 	color:#F6BC44;
 }
 
-#ul-notif li .blue h5{
+.ul-notif li .blue h5{
 	color:#2E72B5;
 }
 
-#ul-notif li h5{
+.ul-notif li h3{
 	font-family:sans-serif;
 	font-weight:bold;
 }
 
-#ul-notif li p{
+.ul-notif li .red h3{
+	color:#E5583F;
+}
+
+.ul-notif li .green2 h3{
+	color:#8CC253;
+}
+
+.ul-notif li .yellow h3{
+	color:#F6BC44;
+}
+
+.ul-notif li .blue h3{
+	color:#2E72B5;
+}
+
+.ul-notif li h3{
+	font-family:sans-serif;
+	font-weight:bold;
+	margin-bottom: 0.7rem;
+	margin-top:0rem;
+}
+
+.ul-notif li p{
 	font-size:0.8rem;
 }
 
-#ul-notif li i{
+.ul-notif li i{
 	padding:0 0.7rem;
+	cursor:pointer;
 }
 
-#aside-container{
+.listNotifications .ul-notif{
+	width:100%;
+	display:flex;
+	flex-flow:row wrap;
+	justify-content:space-around;
+	align-items:center;
+}
+
+.listNotifications .ul-notif li{
+	width:20rem;
+}
+
+.listNotifications .ul-notif li i{
+	padding-right:2rem;
+}
+
+.aside-container{
 	flex-grow: 1;
 	display:flex;
 	flex-flow: row wrap;
 }
 
-#scroll-notif{
+.scroll-notif{
   color: white;
   width: 5%;
   margin-top: 20%;
   margin-bottom: 80%;
   margin-left: 1.5rem;
+  position:relative;
 }
 
-#scroll-notif i{
+.scroll-notif i{
 	padding:1rem 0;
+	cursor:pointer;
 }
 
-#seeAll{
+.seeAll{
 	color:white;
 	margin-right:auto;
 	margin-left:auto;
@@ -171,38 +211,44 @@ input[list].notif-select {
 	cursor:pointer;
 }
 
-#header-icon{
+.header-icon{
 	display:none;
 }
 
-#header-search{
+.flexList{
+	display:flex;
+	flex-flow:row wrap;
+	flex:1;
+}
+
+.header-search{
 	display:inline-block;
 	margin-left: 0.5rem;
 	color:#B882B9;
+	cursor:pointer;
 }
 
-#header-user{
+.headerUserMobile{
 	display:none;
 	text-align:center;
 }
 
-#header-search-mobile{
+.header-search-mobile{
 	color:white;
 	display:none;
-}
-
-#mainNotifications{
-	background:#290837;  margin-left: auto;
+	position:relative;
+	cursor:pointer;
+}	
+	
+.mainNotifications{
+	background:#290837;
+	margin-left: auto;
 	margin-right: auto;
 	justify-content: center;
 	align-items: center;
 	flex-flow: column wrap;
 	flex: 1;
-}
-
-#listNotifications{
-	display:flex;
-	flex-flow:row wrap;
+	display:none;
 }
 
 .mainaside{
@@ -211,13 +257,16 @@ input[list].notif-select {
 	flex:1;
 }
 
-#main-buttons{
+.main-buttons{
+	display:flex;
 	flex-flow:row wrap;
 	color:white;
 	font-weight:bold;
+	padding-right: 1rem;
+	padding-left: 1rem;
 }
 
-.green{
+.indexButton{
 	background:#3DBB9B;
 	cursor:pointer;
 	text-align:center;
@@ -228,7 +277,7 @@ input[list].notif-select {
 	flex-grow:4;
 }
 
-.green i{
+.indexButton i{
 	margin:0.5rem;
 	text-align:center;
 	padding: 1rem 0;
@@ -310,6 +359,10 @@ input[list].notif-select {
 	display: none;
 }
 
+.notificationActions {
+	display: none;
+}
+
 .compress{
 	color:white;
 	margin-right:1rem;
@@ -332,6 +385,167 @@ input[list].notif-select {
 	display:none;
 }
 
+.searchModal{
+	position: absolute;
+	background: white;
+	box-shadow:0rem 0rem 1rem black;
+	z-index: 99;
+	left: -9.5rem;
+	top: 2.1rem;
+}
+
+.searchModal div {
+	margin: 1.3rem;
+}
+
+input[list].header-selectMobile {
+	padding: 0.7rem 0.5rem;
+	border-radius: 0.3rem;
+	border-style: none;
+	color: black;
+	border: 0.1rem solid gray;
+	width: 18rem;
+	margin: 0.6rem 1rem;
+}
+
+.button{
+	background: #B882B9;
+	padding:0.7rem 0.5rem;
+	border-radius:0.3rem;
+	border-style: none;
+	color: white;
+	cursor:pointer;
+}
+
+.button i{
+	padding:0rem 0.3rem 0rem 0.3rem;
+}
+
+.headerUserMobile{
+	position:relative;
+}
+
+.userModal{
+	background:white;
+	padding:0.5rem 1rem;
+	box-shadow:0rem 0rem 1rem black;
+	position:absolute;
+	right:2rem;
+	top:5rem;
+	color:black;
+	z-index:99;
+}
+
+.userModal ul{
+	padding: 1rem 0.5rem 0 0.5rem;
+	margin:0;
+}
+
+.userModal i{
+	padding:0rem 0.6rem 0rem 0rem;
+}
+
+.userModal li{
+	list-style:none;
+	text-align:left;
+	padding-bottom:1rem;
+	cursor:pointer;
+}
+
+.notificationsModal{
+	background: white;
+	padding: 0.5rem 1rem;
+	box-shadow: 0rem 0rem 1rem black;
+	position: absolute;
+	left: 24%;
+	top: 14.2rem;
+	color: black;
+	z-index: 99;
+}
+
+.notificationsModal ul{
+	padding: 1rem 0.5rem 0 0.5rem;
+	margin:0;
+}
+
+.notificationsModal i{
+	padding-right:0.6rem;
+}
+
+.notificationsModal li{
+	list-style:none;
+	text-align:left;
+	margin-bottom:1rem;
+	margin-top:1rem;
+	cursor:pointer;
+}
+
+.mainModal{
+	background: white;
+	padding: 0.5rem 1rem;
+	box-shadow: 0rem 0rem 1rem black;
+	position: absolute;
+	top: 2.3rem;
+	color: black;
+	width:16rem;
+	z-index: 99;
+}
+
+.mainModal ul{
+	padding: 1rem 0.5rem 0 0.5rem;
+	margin:0;
+}
+
+.mainModal i{
+	padding-right:0.6rem;
+}
+
+.mainModal li{
+	list-style:none;
+	text-align:left;
+	padding-bottom:1.08rem;
+	cursor:pointer;
+}
+
+.nonDisplayedAll{
+	display:none;
+}
+
+.iconButtonsContainer{
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:1.5rem;
+
+}
+
+.iconButtons{
+	padding:0.3rem 1rem;
+	border-radius:0.3rem;
+	border-style: none;
+	color: white;
+	cursor:pointer;
+	margin:0 0.2rem;
+}
+
+.message{
+	background:#F6BC44;
+}
+
+.ticket{
+	background:rgb(140, 194, 83);
+}
+
+.order{
+	color:white;
+	margin-top:1rem;
+	display:flex;
+	justify-content:space-around;
+}
+
+.options{
+	display:none;
+}
+
 @media screen and (max-width:1240px) {
 	aside {
 		display: none;
@@ -341,16 +555,27 @@ input[list].notif-select {
 		display:none;
 	}
 	
-	#header-icon{
-		display:inline-block;
-		color:white;
-	}
-	
-	#scroll-notif{
+	.main-buttons{
 		display:none;
 	}
 	
-	#aside-container{
+	.mainNotifications{
+		display:flex;
+		flex-flow:row wrap;
+	}
+	
+	.header-icon{
+		display:inline-block;
+		cursor:pointer;
+		color:white;
+		position:relative;
+	}
+	
+	.scroll-notif{
+		display:none;
+	}
+	
+	.aside-container{
 		margin-left:auto;
 		margin-right:auto;
 	}
@@ -367,8 +592,25 @@ input[list].notif-select {
 		display:flex;
 	}
 	
-	#ul-notif{
+	.ul-notif{
 		width:100%;
+	}
+	
+	.options{
+		display:block;
+		margin-left: 1.5rem;
+		margin-top: 1rem;
+	}
+	
+	.options i{
+		color:#B882B9;
+		cursor:pointer;
+		position: relative;
+	}
+	
+	.notificationsModal{
+		left: 52%;
+		top: 8rem;
 	}
 }
 
@@ -381,24 +623,34 @@ input[list].notif-select {
 		display:none;
 	}
 	
-	#middle-item{
+	.middle-item{
 		height:1.5rem;
 	}
 	
-	.btn-group{
+	.userButton{
 		display:none;
 	}
 	
-	#header-user{
+	.headerUserMobile{
 		display:inline-block;
+		cursor:pointer;
 		color:white;
 	}
 	
-	#header-search-mobile{
+	.header-search-mobile{
 		display:inline;
 	}
 	
-	#header-search{
+	.header-search{
 		display:none;
+	}
+	
+	.userModal{
+		top: 3.9rem;
+	}
+	
+	.notificationsModal{
+		left: 53%;
+		top: 8rem;
 	}
 }
