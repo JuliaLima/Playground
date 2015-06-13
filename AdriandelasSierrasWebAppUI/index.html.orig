@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Adrian de las Sierras</title>
+		<link rel="stylesheet" type="text/css" href="styles/style.css">
+<<<<<<< HEAD
+		<link rel="stylesheet" type="text/css" href="styles/mainNotif.css">
+=======
+		<link rel="stylesheet" type="text/css" href="styles/animate.css">
+>>>>>>> 2d5d3934f07ecdaf752fdba7558230de4e9cb82a
+		<link rel="stylesheet" href="styles/font-awesome-4.3.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="styles/font-awesome-4.3.0/css/site.css">
+		<link rel="stylesheet" href="styles/animate.css">
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+		<script type="text/javascript" src="scripts/vendor/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="scripts/ui.js"></script>
+	</head>
+	<body>
+<<<<<<< HEAD
+		<div class="main-flex">
+			<header>
+				<img src="img/logo.png">
+				<div class="header-icon">
+					<i data-hamburgerIcon class="fa fa-navicon fa-lg"></i>
+					<div data-mainModal class="mainModal nonDisplayedAll">
+						<ul>
+							<li><i class="fa fa-file"></i>Nueva Venta</li>
+							<li><i class="fa fa-briefcase"></i>Clientes</li>
+							<li><i class="fa fa-tags"></i>Productos</li>
+							<li><i class="fa fa-cubes"></i>Proveedores</li>
+							<li><i class="fa fa-edit"></i>Editar Venta</li>
+							<li><i class="fa fa-times"></i>Cancelar Venta</li>
+							<li><i class="fa fa-money"></i>Carga Cobro Clientes</li>
+							<li><i class="fa fa-dollar"></i>Carga Pago Proveedores</li>
+							<li><i class="fa fa-ticket"></i>Vouchers</li>
+							<li><i class="fa fa-users"></i>Pax en Destino</li>
+							<li><i class="fa fa-exchange"></i>In/Out</li>
+							<li><i class="fa fa-list-alt"></i>Liquidaci&oacute;n</li>
+						</ul>
+					</div>
+				</div>
+				<div class="middle-item">
+					<input list="select-list" class="header-select" placeholder="D&oacute;nde buscar?">
+						<datalist class="select-list">
+=======
+		<div id="main-flex">
+			<header>
+				<img src="img/logo.png">
+				<div id="header-icon">
+					<i class="fa fa-bell fa-lg" id="bell"></i>
+				</div>
+				<div id="middle-item">
+					<input list="select-list" class="header-select" placeholder="D&oacute;nde buscar?">
+						<datalist id="select-list">
+>>>>>>> 2d5d3934f07ecdaf752fdba7558230de4e9cb82a
+							<option value="Clientes"></option>
+							<option value="Productos"></option>
+							<option value="Proveedores"></option>
+							<option value="Pax"></option>
+						</datalist>
+					<input list="search-list" class="header-select" placeholder="Qu&eacute; buscar?">
+<<<<<<< HEAD
+						<datalist class="search-list">
+=======
+						<datalist id="search-list">
+>>>>>>> 2d5d3934f07ecdaf752fdba7558230de4e9cb82a
+							<option value="Altman Augusto"></option>
+							<option value="Altman Adrian"></option>
+							<option value="Altman Victoria"></option>
+						</datalist>
+<<<<<<< HEAD
+					<div class="header-search">
+						<i class="fa fa-search fa-lg"></i>
+					</div>
+					<div class="header-search-mobile">
+						<i data-search class="fa fa-search fa-lg"></i>
+						<div data-search-modal class="searchModal nonDisplayedAll">
+							<input list="select-list" class="header-selectMobile" placeholder="D&oacute;nde buscar?">
+								<datalist class="select-list">
+									<option value="Clientes"></option>
+									<option value="Productos"></option>
+									<option value="Proveedores"></option>
+									<option value="Pax"></option>
+								</datalist><br />
+							<input list="search-list" class="header-selectMobile" placeholder="Qu&eacute; buscar?">
+								<datalist class="search-list">
+									<option value="Altman Augusto"></option>
+									<option value="Altman Adrian"></option>
+									<option value="Altman Victoria"></option>
+								</datalist><br />
+							<div>
+								<span class="button">Buscar</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="userButton">
+					<span data-userButton class="button"><i class="fa fa-user"></i> Adrian</span>
+				</div>
+				<div class="headerUserMobile">
+					<i data-user class="fa fa-user fa-lg" ></i>
+				</div>
+				<div data-user-modal class="userModal nonDisplayedAll">
+					<ul>
+						<li><i class="fa fa-pencil"></i>Editar Usuario</li>
+						<li><i class="fa fa-refresh"></i>Cambiar Usuario</li>
+						<li><i class="fa fa-trash"></i>Eliminar Usuario</li>
+						<li><i class="fa fa-times-circle-o"></i>Cerrar Sesi&oacute;n</li>
+					</ul>
+=======
+						<div id="header-search">
+							<i class="fa fa-search fa-lg"></i>
+						</div>
+						<div id="header-search-mobile">
+							<i class="fa fa-search fa-lg"></i>
+							<div class="searchModal">
+								<input list="select-list" class="header-select" placeholder="D&oacute;nde buscar?">
+									<datalist id="select-list">
+										<option value="Clientes"></option>
+										<option value="Productos"></option>
+										<option value="Proveedores"></option>
+										<option value="Pax"></option>
+									</datalist><br />
+								<input list="search-list" class="header-select" placeholder="Qu&eacute; buscar?">
+									<datalist id="search-list">
+										<option value="Altman Augusto"></option>
+										<option value="Altman Adrian"></option>
+										<option value="Altman Victoria"></option>
+									</datalist><br />
+								<button type="button">Buscar</button>
+							</div>
+						</div>
+				</div>
+				<div class="btn-group open">
+					<span class="btn btn-primary" href="#"><i class="fa fa-user fa-fw" ></i> Adrian</span>
+					<a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
+					<span class="fa fa-caret-down"></span></a>
+				</div>
+				<div id="header-user">
+					<i class="fa fa-user fa-lg" ></i>
+>>>>>>> 2d5d3934f07ecdaf752fdba7558230de4e9cb82a
+				</div>
+			</header>
+			<div class="mainaside">
+				<main>
+<<<<<<< HEAD
+					<div class="flex-type main-buttons">
+						<div class="indexButton">
+=======
+					<div id="main-buttons" class="overridable-flex">
+						<div class="green">
+>>>>>>> 2d5d3934f07ecdaf752fdba7558230de4e9cb82a
+							<i class="fa fa-file fa-5x"></i><br />
+							Nueva Venta
+						</div>
+						<div class="indexButton">
+							<i class="fa fa-briefcase fa-5x"></i><br />
+							Clientes
+						</div>
+						<div class="indexButton">
+							<i class="fa fa-tags fa-5x"></i><br />
+							Productos
+						</div>
+						<div class="indexButton">
+							<i class="fa fa-cubes fa-5x"></i><br />
+							Proveedores
+						</div>
+						<div class="indexButton">
+							<i class="fa fa-edit fa-5x"></i><br />
+							Editar Venta
+						</div>
+						<div class="indexButton">
+							<i class="fa fa-times fa-5x"></i><br />
+							Cancelar Venta
+						</div>
+						<div class="indexButton">
+							<i class="fa fa-money fa-5x"></i><br />
+							Carga Cobro <br /> Clientes
+						</div>
+						<div class="indexButton">
+							<i class="fa fa-dollar fa-5x"></i><br />
+							Carga Pago <br /> Proveedores
+						</div>
+						<div class="indexButton">
+							<i class="fa fa-ticket fa-5x"></i><br />
+							Vouchers
+						</div>
+						<div class="indexButton">
+							<i class="fa fa-users fa-5x"></i><br />
+							Pax en destino
+						</div>
+						<div class="indexButton">
+							<i class="fa fa-exchange fa-5x"></i><br />
+							In/Out
+						</div>
+						<div class="indexButton">
+							<i class="fa fa-list-alt fa-5x"></i><br />
+							Liquidaci&oacute;n
+						</div>
+					</div>
+<<<<<<< HEAD
+					<div data-main-notifications class="mainNotifications">
+						<div class="actionsNotifications">
+							<div class="notif-icons">
+=======
+					<div id="mainNotifications" class="mobile-overridable-flex non-displayed">
+						<div id="actionsNotifications">
+							<input list="notif-list" class="notif-select" placeholder="Ordenar por">
+							<datalist id="notif-list">
+								<option value="Fecha"></option>
+								<option value="Prioridad"></option>
+								<option value="Prioridad"></option>
+								<option value="Prioridad"></option>
+								<option value="Prioridad"></option>
+								<option value="Prioridad"></option>
+							</datalist>
+							<div id="notif-icons">
+>>>>>>> 2d5d3934f07ecdaf752fdba7558230de4e9cb82a
+								<i data-notificationsEmail="10" class="fa fa-envelope fa-lg yellow"></i>
+								<i data-notificationsBus="08" class="fa fa-bus fa-lg green2"></i>
+								<i data-notificationsWarning="05" class="fa fa-warning fa-lg red"></i>
+								<i data-notificationsNotes="20" class="fa fa-thumb-tack fa-lg blue"></i>
+							</div>
+						</div>
+						<div class="options">
+							<i data-cog class="fa fa-cog fa-lg"></i>
+						</div>
+						<div data-iconButtonMessage class="iconButtonsContainer nonDisplayedAll">
+							<span class="iconButtons message">Rta a Proveedor</span>
+							<span class="iconButtons message">Mail a Cliente</span>
+						</div>
+						<div data-iconButtonTicket class="iconButtonsContainer nonDisplayedAll">
+							<span class="iconButtons ticket">Reservar</span>
+							<span class="iconButtons ticket">Confirmar</span>
+						</div>
+						<div class="listNotifications">
+							<ul class="ul-notif">
+								<li class="warning">
+									<div class="notificationInfo red">
+										<h3>Vencimiento de Pago</h3>
+										<p>Reserva N&ordm; 150516</p>
+									</div>
+									<div class="notificationActions">
+										<i class="fa fa-bookmark fa-lg paddingIcon"></i>
+										<i class="fa fa-eye fa-lg"></i>
+										<i class="fa fa-check fa-lg"></i>
+										<i class="fa fa-close fa-lg"></i>
+									</div>
+								</li>
+								<li class="email">
+									<div class="notificationInfo yellow">
+										<h3>Respuesta a Proveedor</h3>
+										<p>Reserva N&ordm; 150516</p>
+									</div>
+									<div class="notificationActions">
+										<i class="fa fa-bookmark fa-lg"></i>
+										<i class="fa fa-eye fa-lg"></i>
+										<i class="fa fa-check fa-lg"></i>
+										<i class="fa fa-close fa-lg"></i>
+									</div>
+								</li>
+								<li class="bus">
+									<div class="notificationInfo green2">
+										<h3>Vto Reserva Bus</h3>
+										<p>Reserva N&ordm; 150516</p>
+									</div>
+									<div class="notificationActions">
+										<i class="fa fa-bookmark fa-lg"></i>
+										<i class="fa fa-eye fa-lg"></i>
+										<i class="fa fa-check fa-lg"></i>
+										<i class="fa fa-close fa-lg"></i>
+									</div>
+								</li>
+								<li class="notes">
+									<div class="notificationInfo blue">
+										<h3>Varios</h3>
+										<p>Reserva N&ordm; 150516</p>
+									</div>
+									<div class="notificationActions">
+										<i class="fa fa-bookmark fa-lg"></i>
+										<i class="fa fa-eye fa-lg"></i>
+										<i class="fa fa-check fa-lg"></i>
+										<i class="fa fa-close fa-lg"></i>
+									</div>
+								</li>
+								<li class="email">
+									<div class="notificationInfo yellow">
+										<h3>Respuesta a Proveedor</h3>
+										<p>Reserva N&ordm; 150516</p>
+									</div>
+									<div class="notificationActions">
+										<i class="fa fa-bookmark fa-lg"></i>
+										<i class="fa fa-eye fa-lg"></i>
+										<i class="fa fa-check fa-lg"></i>
+										<i class="fa fa-close fa-lg"></i>
+									</div>
+								</li>
+								<li class="warning">
+									<div class="notificationInfo red">
+										<h3>Vencimiento de Pago</h3>
+										<p>Reserva N&ordm; 150516</p>
+									</div>
+									<div class="notificationActions">
+										<i class="fa fa-bookmark fa-lg"></i>
+										<i class="fa fa-eye fa-lg"></i>
+										<i class="fa fa-check fa-lg"></i>
+										<i class="fa fa-close fa-lg"></i>
+									</div>
+								</li>
+								<li class="notes">
+									<div class="notificationInfo blue">
+										<h3>Varios</h3>
+										<p>Reserva N&ordm; 150516</p>
+									</div>
+									<div class="notificationActions">
+										<i class="fa fa-bookmark fa-lg"></i>
+										<i class="fa fa-eye fa-lg"></i>
+										<i class="fa fa-check fa-lg"></i>
+										<i class="fa fa-close fa-lg"></i>
+									</div>
+								</li>
+								<li class="warning">
+									<div class="notificationInfo red">
+										<h3>Vencimiento de Pago</h3>
+										<p>Reserva N&ordm; 150516</p>
+									</div>
+									<div class="notificationActions">
+										<i class="fa fa-bookmark fa-lg paddingIcon"></i>
+										<i class="fa fa-eye fa-lg"></i>
+										<i class="fa fa-check fa-lg"></i>
+										<i class="fa fa-close fa-lg"></i>
+									</div>
+								</li>
+								<li class="email">
+									<div class="notificationInfo yellow">
+										<h3>Respuesta a Proveedor</h3>
+										<p>Reserva N&ordm; 150516</p>
+									</div>
+									<div class="notificationActions">
+										<i class="fa fa-bookmark fa-lg"></i>
+										<i class="fa fa-eye fa-lg"></i>
+										<i class="fa fa-check fa-lg"></i>
+										<i class="fa fa-close fa-lg"></i>
+									</div>
+								</li>
+								<li class="warning">
+									<div class="notificationInfo red">
+										<h3>Vencimiento de Pago</h3>
+										<p>Reserva N&ordm; 150516</p>
+									</div>
+									<div class="notificationActions">
+										<i class="fa fa-bookmark fa-lg paddingIcon"></i>
+										<i class="fa fa-eye fa-lg"></i>
+										<i class="fa fa-check fa-lg"></i>
+										<i class="fa fa-close fa-lg"></i>
+									</div>
+								</li>
+								<li class="email">
+									<div class="notificationInfo yellow">
+										<h3>Respuesta a Proveedor</h3>
+										<p>Reserva N&ordm; 150516</p>
+									</div>
+									<div class="notificationActions">
+										<i class="fa fa-bookmark fa-lg"></i>
+										<i class="fa fa-eye fa-lg"></i>
+										<i class="fa fa-check fa-lg"></i>
+										<i class="fa fa-close fa-lg"></i>
+									</div>
+								</li>
+								<li style="visibility:hidden;"></li>
+							</ul>
+						</div>
+					</div>
+				</main>
+				<aside>
+					<div class="notif-icons">
+						<i data-notificationsEmail="10" class="fa fa-envelope fa-lg yellow"></i>
+						<i data-notificationsBus="08" class="fa fa-bus fa-lg green2"></i>
+						<i data-notificationsWarning="05" class="fa fa-warning fa-lg red"></i>
+						<i data-notificationsNotes="20" class="fa fa-thumb-tack fa-lg blue"></i>
+					</div>
+					<div data-iconButtonMessage class="iconButtonsContainer nonDisplayedAll">
+						<span class="iconButtons message">Rta Proveedor</span>
+						<span class="iconButtons message">Mail Proveedor</span>
+					</div>
+					<div data-iconButtonTicket class="iconButtonsContainer nonDisplayedAll">
+						<span class="iconButtons ticket">Reservar</span>
+						<span class="iconButtons ticket">Confirmar Vto.</span>
+					</div>
+					<div class="aside-container">
+						<ul class="ul-notif">
+							<li class="warning">
+								<div class="notificationInfo red">
+									<h5>Vencimiento de Pago</h5>
+									<p>Reserva N&ordm; 150516</p>
+								</div>
+								<div class="notificationActions">
+									<i class="fa fa-bookmark"></i>
+									<i class="fa fa-eye icon"></i>
+									<i class="fa fa-check icon"></i>
+									<i class="fa fa-close icon"></i>
+								</div>
+							</li>
+							<li class="email">
+								<div class="notificationInfo yellow">
+									<h5>Respuesta a Proveedor</h5>
+									<p>Reserva N&ordm; 150516</p>
+								</div>
+								<div class="notificationActions">
+									<i class="fa fa-bookmark"></i>
+									<i class="fa fa-eye icon"></i>
+									<i class="fa fa-check icon"></i>
+									<i class="fa fa-close icon"></i>
+								</div>
+							</li>
+							<li class="bus">
+								<div class="notificationInfo green2">
+									<h5>Vto Reserva Bus</h5>
+									<p>Reserva N&ordm; 150516</p>
+								</div>
+								<div class="notificationActions">
+									<i class="fa fa-bookmark"></i>
+									<i class="fa fa-eye icon"></i>
+									<i class="fa fa-check icon"></i>
+									<i class="fa fa-close icon"></i>
+								</div>
+							</li>
+							<li class="notes">
+								<div class="notificationInfo blue">
+									<h5>Varios</h5>
+									<p>Reserva N&ordm; 150516</p>
+								</div>
+								<div class="notificationActions">
+									<i class="fa fa-bookmark"></i>
+									<i class="fa fa-eye icon"></i>
+									<i class="fa fa-check icon"></i>
+									<i class="fa fa-close icon"></i>
+								</div>
+							</li>
+							<li class="email">
+								<div class="notificationInfo yellow">
+									<h5>Respuesta a Proveedor</h5>
+									<p>Reserva N&ordm; 150516</p>
+								</div>
+								<div class="notificationActions">
+									<i class="fa fa-bookmark"></i>
+									<i class="fa fa-eye icon"></i>
+									<i class="fa fa-check icon"></i>
+									<i class="fa fa-close icon"></i>
+								</div>
+							</li>
+							<li class="warning">
+								<div class="notificationInfo red">
+									<h5>Vencimiento de Pago</h5>
+									<p>Reserva N&ordm; 150516</p>
+								</div>
+								<div class="notificationActions">
+									<i class="fa fa-bookmark"></i>
+									<i class="fa fa-eye icon"></i>
+									<i class="fa fa-check icon"></i>
+									<i class="fa fa-close icon"></i>
+								</div>
+							</li>
+							<li class="notes">
+								<div class="notificationInfo blue">
+									<h5>Varios</h5>
+									<p>Reserva N&ordm; 150516</p>
+								</div>
+								<div class="notificationActions">
+									<i class="fa fa-bookmark"></i>
+									<i class="fa fa-eye icon"></i>
+									<i class="fa fa-check icon"></i>
+									<i class="fa fa-close icon"></i>
+								</div>
+							</li>
+						</ul>
+						<div class="scroll-notif">
+							<i class="fa fa-compress disable"></i>
+							<i data-notif class="fa fa-cog"></i>
+							<i class="fa fa-arrow-circle-up fa-lg disable"></i><br />
+							<i class="fa fa-arrow-circle-down fa-lg"></i>
+						</div>
+					</div>
+				</aside>
+				<div data-notif-modal class="notificationsModal nonDisplayedAll">
+					<ul>
+						<p><b>Ordenar por:</b></p>
+						<li><i class="fa fa-calendar"></i>Fecha</li>
+						<li><i class="fa fa-bookmark"></i>Prioridad</li>
+						<hr />
+						<li><i class="fa fa-eye"></i>Ver todo</li>
+					</ul>
+				</div>
+			</div>
+			<footer>
+				&copy; Copyright 2015 - Adrian de las Sierras EVT Leg. 11909
+			</footer>
+		</div>
+	</body>
+</html>
