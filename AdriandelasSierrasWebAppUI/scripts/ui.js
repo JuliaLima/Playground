@@ -1,105 +1,34 @@
-var hideClass = 'nonDisplayedAll';
-
-var hideElement=function(elem){
-	elem.addClass(hideClass);
-}
+var animationClassIn = 'animated fadeIn';
+var animationClassOut = 'animated fadeOut';
+var classforHiddingFirst = 'non-displayed-for-fading';
 
 var showElement=function(elem){
-	elem.removeClass(hideClass);
-}
+	elem.removeClass(classforHiddingFirst);
+	elem.removeClass(animationClassOut);
+	elem.addClass(animationClassIn);
+};
 
-/*var toggle=function(elem){
-	if(){
-	
-	}
-}*/
+var hideElement=function(elem){
+	elem.removeClass(animationClassIn);
+	elem.addClass(animationClassOut);
+};
+
+var isShown=function(elem){
+	return elem.hasClass(classforHiddingFirst) || elem.hasClass(animationClassOut);
+};
 
 var setUiEvents = function() {
-	var actions=$('[data-hamburgerIcon]');
-	var actionsClickBehaviour=function(){
-		var modal=$('[data-mainModal]');
-		var modalDisplayValue = modal.css('display');
-		if(modalDisplayValue == 'none'){
-			showElement(modal);
-			$(modal).addClass('animated fadeIn');
+	var bubbles = $('[bubble-toggle]');
+	var bubblesClickBehaviour = function() {
+		var bubbleModalName = $(this).attr('bubble-toggle');
+		var bubbleModal = $('['+bubbleModalName+']');
+		if(isShown(bubbleModal)){
+			showElement(bubbleModal);
 		} else {
-			$(modal).removeClass('animated fadeIn');
-			hideElement(modal);
+			hideElement(bubbleModal);
 		}
-	}
-	actions.click(actionsClickBehaviour);
-	
-	var cog=$('[data-cog]');
-	var cogClickBehaviour=function(){
-		var modal=$('[data-notif-modal]');
-		var modalDisplayValue = modal.css('display');
-		if(modalDisplayValue == 'none'){
-			showElement(modal);
-			$(modal).addClass('animated fadeIn');
-		} else {
-			$(modal).removeClass('animated fadeIn');
-			hideElement(modal);
-		}
-	}
-	cog.click(cogClickBehaviour);
-	
-	
-	var search=$('[data-search]');
-	var searchClickBehaviour=function(){
-		var modal=$('[data-search-modal]');
-		var modalDisplayValue=modal.css('display');
-		if(modalDisplayValue == 'none'){
-			showElement(modal);
-			$(modal).addClass('animated fadeIn');
-		} else {
-			$(modal).removeClass('animated fadeIn');
-			hideElement(modal);
-		}
-	}
-	search.click(searchClickBehaviour);
-	
-	var userButton=$('[data-userButton]');
-	var userButtonClickBehaviour=function(){
-		var modal=$('[data-user-modal]');
-		var modalDisplayValue=modal.css('display');
-		if(modalDisplayValue == 'none'){
-			showElement(modal);
-			$(modal).addClass('animated fadeIn');
-		} else {
-			$(modal).removeClass('animated fadeIn');
-			hideElement(modal);
-		}
-	}
-	userButton.click(userButtonClickBehaviour);
-	
-	var user=$('[data-user]');
-	var userClickBehaviour=function(){
-		var modal=$('[data-user-modal]');
-		var modalDisplayValue=modal.css('display');
-		if(modalDisplayValue == 'none'){
-			showElement(modal);
-			$(modal).addClass('animated fadeIn');
-		} else {
-			$(modal).removeClass('animated fadeIn');
-			hideElement(modal);			
-		}
-	}
-	user.click(userClickBehaviour);
-	
-	var notif=$('[data-notif]');
-	var notifClickBehaviour=function(){
-		var modal=$('[data-notif-modal]');
-		var modalDisplayValue=modal.css('display');
-		if(modalDisplayValue == 'none'){
-			showElement(modal);
-			$(modal).addClass('animated fadeIn');
-		} else {
-			$(modal).removeClass('animated fadeIn');
-			hideElement(modal);			
-		}
-	}
-	notif.click(notifClickBehaviour);
-
+	};
+	bubbles.click(bubblesClickBehaviour);
 	
 	var icon=$('[data-notificationsEmail]');
 	var iconClickBehaviour=function(){

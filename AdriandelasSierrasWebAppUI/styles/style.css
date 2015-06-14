@@ -1,11 +1,125 @@
 header{
 	background: #4C0B5F;
-	padding:1rem 2rem;
-	display:flex;
+	padding:0 2rem;
 	text-align:center;
-	justify-content:space-between;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;	
+}
+
+input[type="text"] {
+	padding: 0.7rem 0.5rem;
+	border-radius: 0.3rem;
+	border-style: none;
+	color: black;
+	border: 0.1rem solid gray;
+}
+
+header nav > ul{
+	display: flex;
 	flex-flow:row wrap;
+	justify-content:space-between;
 	align-items:center;
+	padding:0;
+}
+
+header nav > ul > li{
+	display: inline;
+	position:relative;
+	list-style-type: none;
+	cursor:pointer;
+	color:white;
+}
+
+header nav > ul > li div{
+	display:inline-block;
+}
+
+header nav > ul > li:nth-child(1) > div.bubble {
+	left:0rem;
+	width:16rem;
+}
+
+header nav > ul > li:nth-child(2) > div.bubble {
+	left: -10.3rem;
+}
+
+header nav > ul > li:nth-child(2) div.bubble input[type="text"]{
+	width: 18rem;
+	margin: 0.6rem 1rem;
+}
+
+header nav > ul > li:nth-child(3) > div.bubble {
+	right:0rem;
+	width: 12rem;
+}
+
+#middle{
+	display: flex;
+	flex-direction: row;
+	flex:1;
+	margin: 0px;
+}
+
+.bubble {
+	background:white;
+	box-shadow:0rem 0rem 1rem black;
+	position:absolute;
+	z-index:99;
+	color:black;
+	padding:0.5rem 1rem;
+	top: 2.3rem;
+}
+
+.bubble div {
+	margin: 1.3rem;
+}
+
+.bubble ul{
+	padding: 1rem 0.5rem 0 0.5rem;
+	margin:0;
+}
+
+.bubble ul li{
+	list-style:none;
+	text-align:left;
+	padding-bottom:2rem;
+	cursor:pointer;
+}
+
+.bubble ul li:last-child{
+	padding-bottom:1rem;
+}
+
+.bubble ul li i{
+	padding:0rem 0.6rem 0rem 0rem;
+}
+
+.only-large-resolutions {
+	display:block !important;
+}
+
+.only-large-to-medium-resolutions {
+	display:block !important;
+}
+
+.only-medium-resolutions {
+	display:none !important;
+}
+
+.only-medium-to-small-resolutions {
+	display:none !important;
+}
+
+.only-small-resolutions {
+	display:none !important;
+}
+
+.non-displayed-for-fading {
+	opacity: 0;
 }
 
 hr {
@@ -42,13 +156,6 @@ aside{
 	width:25%;
 }
 
-input[list].header-select {
-	padding: 0.7rem 0.5rem;
-	border-radius: 0.3rem;
-	border-style: none;
-	color: black;
-}
-
 input[list].notif-select {
 	padding: 0.7rem 0.5rem;
 	border-radius: 0.3rem;
@@ -58,18 +165,6 @@ input[list].notif-select {
 	margin-left: auto;
 	margin-right: auto;
 	width: 18rem;
-}
-
-.main-flex{
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
-}
-
-.middle-item{
-	height:2.5rem;
-	margin:0rem;
-	flex-grow:2;
 }
 
 .notif-icons{
@@ -211,10 +306,6 @@ input[list].notif-select {
 	cursor:pointer;
 }
 
-.header-icon{
-	display:none;
-}
-
 .flexList{
 	display:flex;
 	flex-flow:row wrap;
@@ -228,18 +319,6 @@ input[list].notif-select {
 	cursor:pointer;
 }
 
-.headerUserMobile{
-	display:none;
-	text-align:center;
-}
-
-.header-search-mobile{
-	color:white;
-	display:none;
-	position:relative;
-	cursor:pointer;
-}	
-	
 .mainNotifications{
 	background:#290837;
 	margin-left: auto;
@@ -249,12 +328,6 @@ input[list].notif-select {
 	flex-flow: column wrap;
 	flex: 1;
 	display:none;
-}
-
-.mainaside{
-	display: flex;
-	flex-direction: row;
-	flex:1;
 }
 
 .main-buttons{
@@ -385,29 +458,6 @@ input[list].notif-select {
 	display:none;
 }
 
-.searchModal{
-	position: absolute;
-	background: white;
-	box-shadow:0rem 0rem 1rem black;
-	z-index: 99;
-	left: -9.5rem;
-	top: 2.1rem;
-}
-
-.searchModal div {
-	margin: 1.3rem;
-}
-
-input[list].header-selectMobile {
-	padding: 0.7rem 0.5rem;
-	border-radius: 0.3rem;
-	border-style: none;
-	color: black;
-	border: 0.1rem solid gray;
-	width: 18rem;
-	margin: 0.6rem 1rem;
-}
-
 .button{
 	background: #B882B9;
 	padding:0.7rem 0.5rem;
@@ -419,37 +469,6 @@ input[list].header-selectMobile {
 
 .button i{
 	padding:0rem 0.3rem 0rem 0.3rem;
-}
-
-.headerUserMobile{
-	position:relative;
-}
-
-.userModal{
-	background:white;
-	padding:0.5rem 1rem;
-	box-shadow:0rem 0rem 1rem black;
-	position:absolute;
-	right:2rem;
-	top:5rem;
-	color:black;
-	z-index:99;
-}
-
-.userModal ul{
-	padding: 1rem 0.5rem 0 0.5rem;
-	margin:0;
-}
-
-.userModal i{
-	padding:0rem 0.6rem 0rem 0rem;
-}
-
-.userModal li{
-	list-style:none;
-	text-align:left;
-	padding-bottom:1rem;
-	cursor:pointer;
 }
 
 .notificationsModal{
@@ -480,35 +499,12 @@ input[list].header-selectMobile {
 	cursor:pointer;
 }
 
-.mainModal{
-	background: white;
-	padding: 0.5rem 1rem;
-	box-shadow: 0rem 0rem 1rem black;
-	position: absolute;
-	top: 2.3rem;
-	color: black;
-	width:16rem;
-	z-index: 99;
-}
-
-.mainModal ul{
-	padding: 1rem 0.5rem 0 0.5rem;
-	margin:0;
-}
-
-.mainModal i{
-	padding-right:0.6rem;
-}
-
-.mainModal li{
-	list-style:none;
-	text-align:left;
-	padding-bottom:1.08rem;
-	cursor:pointer;
-}
-
 .nonDisplayedAll{
-	display:none;
+	height:0 !important;
+	margin:0 !important;
+	padding:0 !important;
+	border:0 !important;
+	visibility:hidden;
 }
 
 .iconButtonsContainer{
@@ -547,6 +543,26 @@ input[list].header-selectMobile {
 }
 
 @media screen and (max-width:1240px) {
+	.only-large-resolutions {
+		display:none !important;
+	}
+
+	.only-large-to-medium-resolutions {
+		display:block !important;
+	}
+	
+	.only-medium-resolutions {
+		display:block !important;
+	}
+	
+	.only-medium-to-small-resolutions {
+		display:block !important;
+	}
+
+	.only-small-resolutions {
+		display:none !important;
+	}
+	
 	aside {
 		display: none;
 	}
@@ -562,13 +578,6 @@ input[list].header-selectMobile {
 	.mainNotifications{
 		display:flex;
 		flex-flow:row wrap;
-	}
-	
-	.header-icon{
-		display:inline-block;
-		cursor:pointer;
-		color:white;
-		position:relative;
 	}
 	
 	.scroll-notif{
@@ -616,18 +625,11 @@ input[list].header-selectMobile {
 
 @media screen and (max-width:800px) {
 	header{
-		height:4.5rem;
+		padding-top:0.5rem;
+		padding-bottom:0.5rem;
 	}
 	
 	input[list].header-select {
-		display:none;
-	}
-	
-	.middle-item{
-		height:1.5rem;
-	}
-	
-	.userButton{
 		display:none;
 	}
 	
@@ -652,5 +654,25 @@ input[list].header-selectMobile {
 	.notificationsModal{
 		left: 53%;
 		top: 8rem;
+	}
+	
+	.only-large-resolutions {
+		display:none !important;
+	}
+
+	.only-large-to-medium-resolutions {
+		display:none !important;
+	}
+
+	.only-medium-resolutions {
+		display:none !important;
+	}
+
+	.only-medium-to-small-resolutions {
+		display:block !important;
+	}
+
+	.only-small-resolutions {
+		display:block !important;
 	}
 }
