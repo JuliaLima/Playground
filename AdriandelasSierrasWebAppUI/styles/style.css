@@ -12,6 +12,10 @@ body {
 	padding:0;
 	font-family:sans-serif;
 	font-size: 1rem;
+	-moz-user-select: none; 
+	-khtml-user-select: none; 
+	-webkit-user-select: none; 
+	-o-user-select: none; 
 }
 
 hr{
@@ -25,6 +29,32 @@ input[type="text"] {
 	border-style: none;
 	color: black;
 	border: 0.1rem solid gray;
+}
+
+input[type="number"]{
+	padding: 0.7rem 0.5rem;
+	border-radius: 0.3rem;
+	border-style: none;
+	color: black;
+	border: 0.1rem solid gray;
+}
+
+input[type="date"]{
+	padding: 0.7rem 0.5rem;
+	border-radius: 0.3rem;
+	border-style: none;
+	color: black;
+	border: 0.1rem solid gray;
+}
+
+textarea{
+	padding: 0.7rem 0.5rem;
+	border-radius: 0.3rem;
+	border-style: none;
+	color: black;
+	border: 0.1rem solid gray;
+	width: 40%;
+	margin-top:1rem !important;
 }
 
 header nav > ul{
@@ -172,6 +202,7 @@ footer{
 	font-weight:bold;
 	width:100%;
 	flex:1;
+	background:white;
 }
 
 #notifications{
@@ -213,6 +244,101 @@ footer{
 [twoFacedElement] [face="isOnTheFront"] {
   -webkit-transform: rotateY(0);
           transform: rotateY(0);
+}
+
+#actions h2{
+	background: #3DBB9B;
+	color: white;
+	padding-bottom: 1rem;
+	padding-top: 1rem;
+	width: 100%;
+	margin-top: 0;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+}
+
+#actions ul{
+	margin-left:10%;
+	color:black;
+	font-weight:normal;
+	list-style:none;
+}
+
+#actions ul li{
+	margin-bottom:2rem;
+	text-align: left;
+}
+
+#actions h4{
+	color: black;
+	border-bottom: solid 3px #2D8F76;
+	padding-bottom: 0.5rem;
+	font-weight: bold;
+	width:80%;
+}
+
+#actions h5{
+	color: black;
+	border-bottom: solid 1px black;
+	padding-bottom: 0.5rem;
+	font-weight: bold;
+	width:70%;
+}
+
+#actions h3{
+	color:black;
+	text-align:right;
+	margin-right:4rem;
+	margin-top:1rem;
+	font-size:2rem;
+}
+
+#actions div{
+	margin-right:4rem;
+}
+
+#actions div > span{
+	color:black;
+	float:right;
+	font-size:1rem;
+	font-weight:normal;
+	margin:0 0.5rem 1rem 0.5rem;
+}
+
+#actions label{
+	color:black;
+	width:25%;
+	font-weight:normal;
+	margin-right:1.5rem;
+}
+
+#actions input[type="text"]{
+	margin-top:1rem;
+	margin-right:1rem;
+	width: 40%;
+}
+
+#actions input[type="radio"]{
+	color:black;
+	margin-top:1rem;
+}
+
+#actions input[type="checkbox"]{
+	color:black;
+	margin-top:1rem;
+}
+
+#actions input[type="number"]{
+	color:black;
+	margin-top:1rem;
+	width: 10%;
+}
+
+#actions input[type="date"]{
+	color:black;
+	margin-top:1rem;
+	width: 20%;
 }
 
 .bubble {
@@ -278,53 +404,6 @@ footer{
 
 .only-small-resolutions {
 	display:none !important;
-}
-
-#actions h2{
-	background:#3DBB9B;
-	font-weight:bold;
-	padding:0.5rem;
-	width:95%;
-	margin-left:auto;
-	margin-right:auto;
-	text-align:center;
-}
-
-#actions h4{
-	color:black;
-	font-weight:bold;
-	padding:0;
-}
-
-#actions ul{
-	width:90%;
-	margin-left:auto;
-	margin-right:auto;
-	padding:0;
-	list-style:none;
-}
-
-#actions ul li{
-	padding-top:1rem;
-	border-bottom:1px solid black;
-	color:black;
-	font-weight:normal;
-	margin:0 2rem;
-}
-
-#actions ul li i{
-	margin-right:1rem;
-	padding:0.5rem 0;
-}
-
-#actions div input[type="text"]{
-	float:right;
-	margin-right:1rem;
-}
-
-#actions div span{
-	float:right;
-	margin-right:5%;
 }
 
 hr {
@@ -573,12 +652,26 @@ input[list].notif-select {
 	padding:0.7rem 0.5rem;
 	border-radius:0.3rem;
 	border-style: none;
-	color: white;
+	color: white !important;
 	cursor:pointer;
 	font-weight:normal;
 }
 
 .button i{
+	padding:0rem 0.3rem 0rem 0.3rem;
+}
+
+.button1{
+	background: #830D9A;
+	padding:0.7rem 0.5rem;
+	border-radius:0.3rem;
+	border-style: none;
+	color: white !important;
+	cursor:pointer;
+	font-weight:normal;
+}
+
+.button1 i{
 	padding:0rem 0.3rem 0rem 0.3rem;
 }
 
@@ -751,5 +844,18 @@ input[list].notif-select {
 	
 	aside > nav > ul > li:nth-child(6) .dropdown-menu{
 		right:0rem;
+	}
+	
+	#actions h3{
+	text-align:center;
+	margin-right:0;
+	}
+	
+	#actions ul{
+	margin-left:0;
+	}
+	
+	#actions span{
+	font-size:1.5rem;
 	}
 }

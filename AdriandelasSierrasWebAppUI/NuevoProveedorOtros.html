@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Adrian de las Sierras</title>
+		<link rel="stylesheet" type="text/css" href="styles/style.css">
+		<link rel="stylesheet" type="text/css" href="styles/mainNotif.css">
+		<link rel="stylesheet" href="styles/font-awesome-4.3.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="styles/font-awesome-4.3.0/css/site.css">
+		<link rel="stylesheet" href="styles/animate.css">
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+		<script type="text/javascript" src="scripts/vendor/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="scripts/ui.js"></script>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<ul>
+					<li class="only-large-to-medium-resolutions">
+						<div>
+							<img src="img/logo.png">
+						</div>
+					</li>
+					<li flip-trigger="twoFacedMain" twoFacedElement="twoFacedButton">
+						<span flip-trigger="twoFacedButton">
+							<div face="isOnTheFront">
+								<i class="fa fa-th fa-lg"></i>
+							</div>
+							<div face="isOnTheBack:-">
+								<i class="fa fa-bell fa-lg"></i>
+							</div>
+						</span>
+					</li>
+					<li>
+						<div bubble-trigger="search-bubble">
+							<i class="fa fa-search fa-lg"></i>
+						</div>
+						<div bubble="search-bubble" class="bubble non-displayed">
+							<input type="text" placeholder="D&oacute;nde buscar?"><br />
+							<input type="text" placeholder="Qu&eacute; buscar?"><br />
+							<div>
+								<span class="button">Buscar</span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="only-large-to-medium-resolutions">
+							<span bubble-trigger="user-bubble" class="button"><i class="fa fa-user"></i> Adrian</span>
+						</div>
+						<div class="only-small-resolutions">
+							<i bubble-trigger="user-bubble" class="fa fa-user fa-lg" ></i>
+						</div>
+						<div bubble="user-bubble" class="bubble non-displayed">
+							<ul>
+								<li><i class="fa fa-pencil"></i>Editar Usuario</li>
+								<li><i class="fa fa-refresh"></i>Cambiar Usuario</li>
+								<li><i class="fa fa-trash"></i>Eliminar Usuario</li>
+								<li><i class="fa fa-times-circle-o"></i>Cerrar Sesi&oacute;n</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<aside>
+			<nav options-menu>
+				<ul>
+					<li>
+						<i class="fa fa-shopping-cart fa-2x"></i>
+						<span class="only-large-resolutions">Ventas</span>
+						<div class="dropdown-menu non-displayed">
+							<ul>
+								<li><i class="fa fa-file"></i>Nueva Venta</li>
+								<ul class="subMenu non-displayed">
+									<li>Mayorista</li>
+									<li>Minorista</li>
+								</ul>
+								<li><i class="fa fa-edit"></i>Editar Venta</li>
+								<li><i class="fa fa-times"></i>Cancelar Venta</li>
+								<li><i class="fa fa-eye"></i>Ver Ventas</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<i class="fa fa-briefcase fa-2x"></i>
+						<span class="only-large-resolutions">Clientes</span>
+						<div class="dropdown-menu non-displayed">
+							<ul>
+								<li><i class="fa fa-file"></i>Nuevo Cliente</li>
+								<li><i class="fa fa-eye"></i>Ver Clientes</li>
+								<ul class="subMenu non-displayed">
+									<li>Mayoristas</li>
+									<li>Minoristas</li>
+								</ul>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<i class="fa fa-tags fa-2x"></i>
+						<span class="only-large-resolutions">Productos</span>
+						<div class="dropdown-menu non-displayed">
+							<ul>
+								<li><i class="fa fa-file"></i>Nuevo Producto</li>
+								<li><i class="fa fa-eye"></i>Ver Productos</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<i class="fa fa-cubes fa-2x"></i>
+						<span class="only-large-resolutions">Proveedores</span>
+						<div class="dropdown-menu non-displayed">
+							<ul>
+								<li><i class="fa fa-bus"></i>Transporte</li>
+								<li><i class="fa fa-hotel"></i>Alojamiento</li>
+								<li><i class="fa fa-leaf"></i>Excursiones</li>
+								<li><i class="fa fa-cutlery"></i>Restaurantes</li>
+								<li><i class="fa fa-plus"></i>Otros</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<i class="fa fa-dollar fa-2x"></i>
+						<span class="only-large-resolutions">Cuentas</span>
+						<div class="dropdown-menu non-displayed">
+							<ul>
+								<li><i class="fa fa-money"></i>Carga de cobro a Clientes</li>
+								<li><i class="fa fa-dollar"></i>Carga de pago a Proveedores</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<i class="fa fa-users fa-2x"></i>
+						<span class="only-large-resolutions">Info Pax</span>
+						<div class="dropdown-menu non-displayed">
+							<ul>
+								<li><i class="fa fa-ticket"></i>Vouchers</li>
+								<li><i class="fa fa-list-alt"></i>Liquidaci&oacute;n</li>
+								<li><i class="fa fa-users"></i>Pax en destino</li>
+								<li><i class="fa fa-exchange"></i>In/Out</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</nav>
+		</aside>
+		<main twoFacedElement="twoFacedMain">
+			<article face="isOnTheFront" id="notifications">
+				<div class="notif-icons">
+					<i data-notificationsEmail="10" class="fa fa-envelope fa-lg yellow"></i>
+					<i data-notificationsBus="08" class="fa fa-bus fa-lg green2"></i>
+					<i data-notificationsWarning="05" class="fa fa-warning fa-lg red"></i>
+					<i data-notificationsNotes="20" class="fa fa-thumb-tack fa-lg blue"></i>
+					<span>
+						<i bubble-trigger="notifications-config" class="fa fa-cog fa-lg" style="color:#B882B9;"></i>
+						<div bubble="notifications-config" class="bubble non-displayed">
+							<ul>
+								<p><b>Ordenar por:</b></p>
+								<li><i class="fa fa-calendar"></i>Fecha</li>
+								<li><i class="fa fa-bookmark"></i>Prioridad</li>
+								<li><i class="fa fa-eye"></i>Ver todo</li>
+							</ul>
+						</div>
+					</span>
+				</div>
+				<ul class="ul-notif">
+						<li class="warning">
+							<div class="notificationInfo red">
+								<h3>Vencimiento de Pago</h3>
+								<p>Reserva N&ordm; 150516</p>
+							</div>
+							<div class="notificationActions">
+								<i class="fa fa-bookmark"></i>
+								<i class="fa fa-eye icon"></i>
+								<i class="fa fa-check icon"></i>
+								<i class="fa fa-close icon"></i>
+							</div>
+						</li>
+						<li class="email">
+							<div class="notificationInfo yellow">
+								<h3>Respuesta a Proveedor</h3>
+								<p>Reserva N&ordm; 150516</p>
+							</div>
+							<div class="notificationActions">
+								<i class="fa fa-bookmark"></i>
+								<i class="fa fa-eye icon"></i>
+								<i class="fa fa-check icon"></i>
+								<i class="fa fa-close icon"></i>
+							</div>
+						</li>
+						<li class="bus">
+							<div class="notificationInfo green2">
+								<h3>Vto Reserva Bus</h3>
+								<p>Reserva N&ordm; 150516</p>
+							</div>
+							<div class="notificationActions">
+								<i class="fa fa-bookmark"></i>
+								<i class="fa fa-eye icon"></i>
+								<i class="fa fa-check icon"></i>
+								<i class="fa fa-close icon"></i>
+							</div>
+						</li>
+						<li class="notes">
+							<div class="notificationInfo blue">
+								<h3>Varios</h3>
+								<p>Reserva N&ordm; 150516</p>
+							</div>
+							<div class="notificationActions">
+								<i class="fa fa-bookmark"></i>
+								<i class="fa fa-eye icon"></i>
+								<i class="fa fa-check icon"></i>
+								<i class="fa fa-close icon"></i>
+							</div>
+						</li>
+						<li class="bus">
+							<div class="notificationInfo green2">
+								<h3>Vto Reserva Bus</h3>
+								<p>Reserva N&ordm; 150516</p>
+							</div>
+							<div class="notificationActions">
+								<i class="fa fa-bookmark"></i>
+								<i class="fa fa-eye icon"></i>
+								<i class="fa fa-check icon"></i>
+								<i class="fa fa-close icon"></i>
+							</div>
+						</li>
+						<li class="notes">
+							<div class="notificationInfo blue">
+								<h3>Varios</h3>
+								<p>Reserva N&ordm; 150516</p>
+							</div>
+							<div class="notificationActions">
+								<i class="fa fa-bookmark"></i>
+								<i class="fa fa-eye icon"></i>
+								<i class="fa fa-check icon"></i>
+								<i class="fa fa-close icon"></i>
+							</div>
+						</li>
+						<li class="bus">
+							<div class="notificationInfo green2">
+								<h3>Vto Reserva Bus</h3>
+								<p>Reserva N&ordm; 150516</p>
+							</div>
+							<div class="notificationActions">
+								<i class="fa fa-bookmark"></i>
+								<i class="fa fa-eye icon"></i>
+								<i class="fa fa-check icon"></i>
+								<i class="fa fa-close icon"></i>
+							</div>
+						</li>
+						<li class="notes">
+							<div class="notificationInfo blue">
+								<h3>Varios</h3>
+								<p>Reserva N&ordm; 150516</p>
+							</div>
+							<div class="notificationActions">
+								<i class="fa fa-bookmark"></i>
+								<i class="fa fa-eye icon"></i>
+								<i class="fa fa-check icon"></i>
+								<i class="fa fa-close icon"></i>
+							</div>
+						</li>
+						<li class="bus">
+							<div class="notificationInfo green2">
+								<h3>Vto Reserva Bus</h3>
+								<p>Reserva N&ordm; 150516</p>
+							</div>
+							<div class="notificationActions">
+								<i class="fa fa-bookmark"></i>
+								<i class="fa fa-eye icon"></i>
+								<i class="fa fa-check icon"></i>
+								<i class="fa fa-close icon"></i>
+							</div>
+						</li>
+						<li class="notes">
+							<div class="notificationInfo blue">
+								<h3>Varios</h3>
+								<p>Reserva N&ordm; 150516</p>
+							</div>
+							<div class="notificationActions">
+								<i class="fa fa-bookmark"></i>
+								<i class="fa fa-eye icon"></i>
+								<i class="fa fa-check icon"></i>
+								<i class="fa fa-close icon"></i>
+							</div>
+						</li>
+						<li class="warning">
+							<div class="notificationInfo red">
+								<h3>Vencimiento de Pago</h3>
+								<p>Reserva N&ordm; 150516</p>
+							</div>
+							<div class="notificationActions">
+								<i class="fa fa-bookmark"></i>
+								<i class="fa fa-eye icon"></i>
+								<i class="fa fa-check icon"></i>
+								<i class="fa fa-close icon"></i>
+							</div>
+						</li>
+						<li class="email">
+							<div class="notificationInfo yellow">
+								<h3>Respuesta a Proveedor</h3>
+								<p>Reserva N&ordm; 150516</p>
+							</div>
+							<div class="notificationActions">
+								<i class="fa fa-bookmark"></i>
+								<i class="fa fa-eye icon"></i>
+								<i class="fa fa-check icon"></i>
+								<i class="fa fa-close icon"></i>
+							</div>
+						</li>
+						<li class="warning">
+							<div class="notificationInfo red">
+								<h3>Vencimiento de Pago</h3>
+								<p>Reserva N&ordm; 150516</p>
+							</div>
+							<div class="notificationActions">
+								<i class="fa fa-bookmark"></i>
+								<i class="fa fa-eye icon"></i>
+								<i class="fa fa-check icon"></i>
+								<i class="fa fa-close icon"></i>
+							</div>
+						</li>
+						<li class="email">
+							<div class="notificationInfo yellow">
+								<h3>Respuesta a Proveedor</h3>
+								<p>Reserva N&ordm; 150516</p>
+							</div>
+							<div class="notificationActions">
+								<i class="fa fa-bookmark"></i>
+								<i class="fa fa-eye icon"></i>
+								<i class="fa fa-check icon"></i>
+								<i class="fa fa-close icon"></i>
+							</div>
+						</li>
+						<li class="warning">
+							<div class="notificationInfo red">
+								<h3>Vencimiento de Pago</h3>
+								<p>Reserva N&ordm; 150516</p>
+							</div>
+							<div class="notificationActions">
+								<i class="fa fa-bookmark"></i>
+								<i class="fa fa-eye icon"></i>
+								<i class="fa fa-check icon"></i>
+								<i class="fa fa-close icon"></i>
+							</div>
+						</li>
+					</ul>
+					</div>
+				</div>
+			</article>
+			<article face="isOnTheBack:-" id="actions">
+				<h2>Nuevo Proveedor: Otros</h2>
+				<ul>
+					<li>
+						<h4>Informaci&oacute;n de Proveedor</h4><br />
+						<label>Nombre</label><input type="text"><br />
+						<label>Raz&oacute;n Social</label><input type="text"><br />
+						<label>CUIT</label><input type="text"><br />
+						<label>Direcci&oacute;n</label><input type="text"><br />
+						<label>Localidad</label><input type="text"><br />
+						<label>Provincia</label><input type="text"><br />
+						<label>Tel&eacute;fono</label><input type="text"><br />
+						<label>Agregar Tel&eacute;fono</label><input type="checkbox"><br />
+						<label>Mail</label><input type="text"><br />
+						<label>Web</label><input type="text"><br />						
+					</li>
+					<li>
+						<h4>Pago</h4><br />
+						<label>Forma de Pago</label><input type="text"><br />
+						<h5>Cuenta 1</h5><br />
+						<label>Titular</label><input type="text"><br />
+						<label>CBU</label><input type="text"><br />
+						<label>Agregar Cuenta</label><input type="checkbox"><br />
+						<label>Agregar Forma de Pago</label><input type="checkbox"><br />
+						<label>Observaciones</label><textarea></textarea><br />
+					</li>
+				</ul>
+				<div>
+					<span class="button1">Crear Otros</span>
+					<span class="button">Cancelar</span>
+				</div>
+			</article>
+		</main>
+		<footer>&copy; Copyright 2015 - Adrian de las Sierras EVT Leg. 11909</footer>
+	</body>
+</html>
