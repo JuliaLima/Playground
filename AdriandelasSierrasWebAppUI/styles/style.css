@@ -29,6 +29,7 @@ input[type="text"] {
 	border-style: none;
 	color: black;
 	border: 0.1rem solid gray;
+	margin-top: 1rem;
 }
 
 input[type="number"]{
@@ -75,6 +76,10 @@ header nav > ul > li{
 
 header nav > ul > li div{
 	display:inline-block;
+}
+
+header nav > ul > li div img{
+	width: 70%;
 }
 
 header nav > ul > li:nth-child(1) > div.bubble {
@@ -195,6 +200,42 @@ footer{
 	padding:1rem;
 }
 
+#loginContainer {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    width: 100vw;
+    flex: 1;
+}
+
+#login {
+	display: flex;
+	flex-flow:row wrap;
+	justify-content:center;
+	align-content:center;
+	padding:0;
+	flex: 1;
+}
+
+#login ul{
+	list-style:none;
+	padding: 0;
+	margin-top: 1rem;
+}
+
+#login ul li{
+	text-align: center;
+}
+
+#login ul li input[type="text"]{
+	width: 100%;
+}
+
+#login img{
+	margin-top: 3rem;
+	margin-bottom: 2rem;
+}
+
 #actions{
 	display:flex;
 	flex-flow:column wrap;
@@ -215,6 +256,25 @@ footer{
 	margin-right: auto;
 	width:100%;
 	flex:1;
+}
+
+#articleUl{
+	width: 60%;
+}
+
+#articleUl li{
+	border-bottom: solid 2px #2D8F76;
+	padding-bottom: 0.5rem;
+	padding-left: 2%;
+}
+
+#clientSearch {
+	margin: 1rem;
+	text-align: center;
+}
+
+#clientSearch input[type="text"]{
+	margin: 0px !important;
 }
 
 [twoFacedElement] {
@@ -258,8 +318,14 @@ footer{
 	text-align: center;
 }
 
+/*margin-left: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100%;
+    padding-left: 0;*/
+
 #actions ul{
-	margin-left:10%;
 	color:black;
 	font-weight:normal;
 	list-style:none;
@@ -314,7 +380,6 @@ footer{
 }
 
 #actions input[type="text"]{
-	margin-top:1rem;
 	margin-right:1rem;
 	width: 40%;
 }
@@ -675,6 +740,19 @@ input[list].notif-select {
 	padding:0rem 0.3rem 0rem 0.3rem;
 }
 
+.button2{
+	background: #3DBB9B;
+	padding: 0.7rem 0.5rem;
+    border-radius: 0.3rem;
+    border-style: none;
+    color: white !important;
+    margin-top: 1rem;
+	cursor:pointer;
+	font-weight:normal;
+	text-align: center;
+	margin-top: 2rem;
+}
+
 .nonDisplayedAll{
 	height:0 !important;
 	margin:0 !important;
@@ -847,15 +925,15 @@ input[list].notif-select {
 	}
 	
 	#actions h3{
-	text-align:center;
-	margin-right:0;
+		text-align:center;
+		margin-right:0;
 	}
 	
 	#actions ul{
-	margin-left:0;
+		margin-left:0;
 	}
 	
 	#actions span{
-	font-size:1.5rem;
+		font-size:1.5rem;
 	}
 }
